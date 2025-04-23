@@ -18,3 +18,4 @@ export default DessertsList;
 
 // here its returning all the list items 
 
+// Here now we will access the low calaory items only by using filter() method 
