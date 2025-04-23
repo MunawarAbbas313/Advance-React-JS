@@ -40,3 +40,8 @@ function DessertsList(props){
 export default DessertsList;
 
 */
+
+
+
+// Now here in 3rd example we will use sort() method to sort the list from smaller calories to larger 
+
