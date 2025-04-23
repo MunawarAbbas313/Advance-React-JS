@@ -19,3 +19,24 @@ export default DessertsList;
 // here its returning all the list items 
 
 // Here now we will access the low calaory items only by using filter() method 
+/*
+function DessertsList(props){
+    return(
+        <>
+           <ul>
+            {props.data.filter((item) => item.calories < 300).map((items , index)=>
+                <li key={ index}>
+                    <p>{items.name}</p>
+                    <p>{items.calories}</p>
+                    <p>{items.createdAt}</p>
+                </li>
+            )}
+          
+           </ul>
+        
+        </>
+    )
+}
+export default DessertsList;
+
+*/
