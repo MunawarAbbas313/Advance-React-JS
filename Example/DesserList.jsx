@@ -45,6 +45,26 @@ export default DessertsList;
 
 // Now here in 3rd example we will use sort() method to sort the list from smaller calories to larger 
 
+/* function DessertsList(props){
+    return(
+        <>
+           <ul>
+            {props.data.filter((item) => item.calories < 300).sort((a,b)=> a.calories - b.calories).map((items , index)=>
+                <li key={ index}>
+                    <p>{items.name}</p>
+                    <p>{items.calories}</p>
+                    <p>{items.createdAt}</p>
+                </li>
+            )}
+          
+           </ul>
+        
+        </>
+    )
+}
+export default DessertsList; 
+*/
+
 /* 
 
 ---
@@ -148,4 +168,5 @@ Used to **display sorted lists** of data in components like:
 ---
 
 */
+
 
