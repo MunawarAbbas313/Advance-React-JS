@@ -53,3 +53,25 @@ function App(){
 
 }
 export default App;
+
+/* Todo Component */
+
+function Todo(props) {
+    return (
+        <>
+            <tr style={{ backgroundColor: "#f9f9f9", borderBottom: "1px solid #ddd", textAlign: "left"  }}>
+                <td style={{ padding: "10px", fontWeight: "bold" }}>
+                    
+                    <label>{props.id}</label>
+                    </td>
+                <td style={{ padding: "10px" }}>
+                    <input style={{ padding: "5px", borderRadius: "4px", border: "1px solid #ccc" }} />
+                </td>
+                <td style={{ padding: "10px", color: "#555" }}>
+                    <label>{props.CreatedAt}</label>
+                </td>
+            </tr>
+        </>
+    );
+}
+export default Todo;
