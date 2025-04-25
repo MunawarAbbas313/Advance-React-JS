@@ -85,3 +85,22 @@ const results = await Promise.all(items.map(async item => await fetch(item)));
 
 ---
 ------------------------------------------------------------------------------------------
+
+  from keys 
+Question 1
+Imagine you have an array with one object that represents a dessert. You would like to apply some transformation to the item to output a different structure using the map function as per the code below. What would be the value of the newDesserts variable?
+  const desserts = [
+ {
+ title: 'Chocolate Cake',
+ description: 'Chocolate cake is a cake flavored with melted chocolate',
+ calories: 500,
+ }
+];
+
+const newDesserts = desserts.map((dessert) => {
+return{
+ title: dessert.title.toUpperCase(),
+ ...dessert,
+ kCal: dessert.calories / 1000,
+ };
+})
