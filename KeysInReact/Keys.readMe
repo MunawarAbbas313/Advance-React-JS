@@ -1,0 +1,44 @@
+### 🔑 What are **Keys** in React?
+
+**Keys** are special attributes used in React to help identify **which items in a list have changed, been added, or removed.**  
+They are essential when rendering lists using `.map()`.
+
+---
+
+### ✅ **Why are keys important?**
+- Help React **optimize rendering** and **maintain performance**.
+- Prevent bugs when updating or reordering elements.
+- Without keys, React re-renders the entire list unnecessarily.
+
+---
+
+### 🧠 **React needs a unique key for each element in a list**  
+It’s **best** to use something **unique and constant**, like an `id`.
+
+---
+
+### ✅ **Example: Rendering a list with keys**
+
+```jsx
+
+```
+
+---
+
+### 🚫 What happens if you **don't use keys**?
+
+- React will show a **warning** in the console.
+- It may cause performance issues or **incorrect UI updates** when the list changes.
+
+---
+
+### 🟢 Summary:
+| Concept | Description |
+|--------|-------------|
+| 🔑 Key | Unique identifier for each element |
+| 📈 Benefit | Optimized re-rendering |
+| ❌ Bad Key | Using array index (only safe if list never changes) |
+| ✅ Good Key | Use a stable, unique ID like `item.id` |
+
+---
+
