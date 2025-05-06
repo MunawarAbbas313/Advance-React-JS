@@ -33,3 +33,42 @@ const Header = () => {
     </header>
   );
 };
+const Para = () => {
+  const { user } = UseUser();
+  return (
+    <div style={{ padding: '0 20px' }}>
+      <h2 style={{
+        color: '#2c3e50',
+        borderBottom: '2px solid #3498db',
+        paddingBottom: '10px',
+        marginBottom: '20px'
+      }}>
+        Hello this is my First Blog
+      </h2>
+      <p style={{
+        lineHeight: '1.6',
+        color: '#34495e',
+        fontSize: '16px',
+        textAlign: 'justify',
+        marginBottom: '20px'
+      }}>
+        Today we are going to understand the CONTEXT API in depth, its use case with a coding example.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet minima reiciendis molestiae.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nam odit veritatis.
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic mollitia modi maiores molestiae nemo.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta porro non officiis culpa exercitationem?
+      </p>
+      <h2 style={{
+        color: '#2c3e50',
+        fontSize: '18px',
+        borderTop: '1px solid #bdc3c7',
+        paddingTop: '15px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '10px'
+      }}>
+        Written with 💗 by : {user.name} : {user.email}
+      </h2>
+    </div>
+  );
+};
