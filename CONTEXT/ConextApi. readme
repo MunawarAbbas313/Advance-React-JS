@@ -1,1 +1,8 @@
+Conext Api :
+   it is use to manage the props inside the child components .
+   it is ued to reomve the prop drilling stuff by direclty given vlaues ( props) to child insided of drilling it through each child element .
 
+
+
+First Create Context ;
+Wrap ther main or App.jsx wiht user.provder 
