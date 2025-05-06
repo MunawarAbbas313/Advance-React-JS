@@ -72,3 +72,20 @@ const Para = () => {
     </div>
   );
 };
+
+function App() {
+  return (
+    <div style={{
+      maxWidth: '800px',
+      margin: '0 auto',
+      fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#f9f9f9',
+      minHeight: '100vh'
+    }}>
+      <Header />
+      <Para />
+    </div>
+  );
+}
+export default App;
+
