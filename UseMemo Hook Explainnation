@@ -136,3 +136,16 @@ const ComponentC = () => {
 };
 
 
+Hooks will be covered in depth in the next module, so don’t worry too much if this is new for you.
+
+For the purpose of this example, it suffices to say that useMemo will memoize the returned value from the function passed as the first argument and will only re-run the computation if any of the values are passed into the array as a second argument change.
+
+With that implementation, if the App re-renders for any other reason that does not change any of ‘a’ or ‘b’ values, the sequence of re-renders will be as such:
+
+App (ContextProvider)
+
+This is the desired result, avoiding an unnecessary re-render on ComponentC. useMemo guarantees keeping the same object reference for the value variable and since that’s assigned to the provider’s value, it determines that the context has not changed and should not notify any consumer.
+
+Conclusion
+
+You have learned about how re-rendering works in React when context is used and how React.memo and useMemo APIs from React can help you perform some optimizations to avoid unnecessary re-renders in your components tree.
