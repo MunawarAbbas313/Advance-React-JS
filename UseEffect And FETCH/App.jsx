@@ -73,3 +73,26 @@ function App() {
             </div>
         );
     }
+    if (error) {
+        return (
+            <div style={containerStyle}>
+                <div style={cardStyle}>
+                    <h2 style={{ color: "#ef4444" }}>Error : {error.message}</h2>
+                </div>
+            </div>
+        );
+    }
+    return (
+        <div style={containerStyle}>
+            <div style={cardStyle}>
+                <h2 style={{ color: "#6366f1", margin: 0 }}>HELLO FETCH</h2>
+                <h2 style={nameStyle}>
+                    Name : {userData.name.first} {userData.name.last}
+                </h2>
+                <img src={userData.picture.large} alt="User" style={imgStyle} />
+            </div>
+        </div>
+    );
+}
+
+export default App;
