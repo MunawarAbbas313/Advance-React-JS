@@ -1,1 +1,11 @@
 
+Okay, here's a short summary in points:
+
+useEffect: React Hook for side effects (like data fetching).
+fetch: JavaScript function to make API requests.
+useEffect + fetch: Used to fetch data after a component renders.
+Dependency Array ([]): Makes the fetch run only once (like componentDidMount).
+State Management (useState): Tracks loading, errors, and fetched data.
+Async/Await: Simplifies handling the asynchronous fetch Promise.
+Conditional Rendering: Shows loading/error states or the fetched data.
+Relation: useEffect manages the lifecycle for safe data fetching with fetch after rendering.
