@@ -1,1 +1,115 @@
 
+
+## ✅ **What is `useReducer`?**
+
+`useReducer` is a React Hook that is used for **state management** — similar to `useState`, but more suitable for **complex state logic**, especially when:
+
+* The state depends on the previous state.
+* Multiple actions can affect the state.
+* You want to separate the logic of **what happens when an action occurs** (pure function).
+
+---
+
+## ✅ **Why use `useReducer` here?**
+
+In your app:
+
+```js
+const initialState = { money: 100 };
+```
+
+You are managing a piece of state: `money`. And you have **two possible actions**:
+
+1. **Buy Ingredients** → Decrease money by \$10
+2. **Sell Ingredients** → Increase money by \$10
+
+Now imagine that logic with `useState` — you would have to manually update the money like:
+
+```js
+setMoney(prev => prev - 10);
+```
+
+But with `useReducer`, you define all your possible actions **in one place** — the `reducer` function:
+
+```js
+const reducer = (state, action) => {
+    if (action.type === "buy-Ing") return { money: state.money - 10 };
+    if (action.type === "sell-Ing") return { money: state.money + 10 };
+    return state;
+};
+```
+
+This makes your logic:
+
+* **Centralized**
+* **Scalable**
+* **Easier to debug**
+* **Closer to Redux-style state management**
+
+---
+
+## ✅ **Breakdown of Your Code**
+
+### 1. `initialState`
+
+```js
+const initialState = { money: 100 };
+```
+
+This is your starting state.
+
+---
+
+### 2. `reducer` function
+
+```js
+const reducer = (state, action) => {
+    if (action.type === "buy-Ing") return { money: state.money - 10 };
+    if (action.type === "sell-Ing") return { money: state.money + 10 };
+    return state;
+};
+```
+
+This handles all the **logic** for changing the state based on the action type.
+
+---
+
+### 3. `useReducer` hook
+
+```js
+const [state, dispatch] = useReducer(reducer, initialState);
+```
+
+This hook:
+
+* Returns the current state (`state`)
+* Returns a `dispatch` function to send actions to the reducer
+
+---
+
+### 4. Dispatching actions
+
+```js
+<button onClick={() => dispatch({ type: "buy-Ing" })}>Buy</button>
+<button onClick={() => dispatch({ type: "sell-Ing" })}>Sell</button>
+```
+
+Each button **dispatches an action** to the reducer, which updates the state.
+
+---
+
+## ✅ When Should You Use `useReducer` Instead of `useState`?
+
+| Use `useState` when...                          | Use `useReducer` when...                                   |
+| ----------------------------------------------- | ---------------------------------------------------------- |
+| You have simple state logic (one or two values) | State updates are complex or involve many types of actions |
+| State updates are independent                   | State updates depend on previous state                     |
+| You don't need to organize state logic          | You want to centralize and organize state transition logic |
+
+---
+
+## ✅ Summary (in your case)
+
+* You're handling **money state** and actions like **buying/selling**.
+* `useReducer` gives you a clean, organized, and scalable way to manage those state transitions.
+* It would be even more useful if you added more actions like `reset`, `apply-discount`, `add-tax`, etc.
